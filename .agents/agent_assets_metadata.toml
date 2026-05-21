@@ -1,0 +1,235 @@
+uploads = []
+
+[[generated]]
+id = "0f-waq75q4uPe738EhMIh"
+uri = "file://attached_assets/generated_images/carousel-promo-vendredi_0.png"
+type = "image"
+title = "carousel-promo-vendredi"
+
+[[generated]]
+id = "bG7pqeu7MYgezklfJqZ75"
+uri = "file://attached_assets/generated_images/carousel-printemps-pelouse_1.png"
+type = "image"
+title = "carousel-printemps-pelouse"
+
+[[generated]]
+id = "uV-UMP_VJ6MjnjZ-ow4Uy"
+uri = "file://attached_assets/generated_images/carousel-lavage-vehicule_2.png"
+type = "image"
+title = "carousel-lavage-vehicule"
+
+[[generated]]
+id = "eyGg16IeVKOyKH784kZww"
+uri = "file://attached_assets/generated_images/carousel-grand-menage_3.png"
+type = "image"
+title = "carousel-grand-menage"
+
+[[generated]]
+id = "Bg6WQ2G4O4ZXMuMYT7Pdx"
+uri = "file://attached_assets/generated_images/carousel-reseaux-sociaux_4.png"
+type = "image"
+title = "carousel-reseaux-sociaux"
+
+[[generated]]
+id = "2_gcqjXomxap25wrL0D3u"
+uri = "file://attached_assets/generated_images/affiche-fb-promo-vendredi.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "gUK0kQDqoic4e3rIxrZ45"
+uri = "file://attached_assets/generated_images/affiche-fb-printemps.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "GnCj3bPaZi124zdEqCsAT"
+uri = "file://attached_assets/generated_images/affiche-fb-vehicule.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "lhcqh379WTuXVP7QTaYOZ"
+uri = "file://attached_assets/generated_images/affiche-fb-grand-menage.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "mJ63rSpCks7-O_V5eh_Kj"
+uri = "file://attached_assets/generated_images/affiche-fb-reseaux.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "lYzh8Xgrz7vMhU02gtcyO"
+uri = "file://attached_assets/generated_images/bg-promo-vendredi.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "fRVLhNraGQw8jx2lOu3vv"
+uri = "file://attached_assets/generated_images/bg-printemps.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "wgI3438t-a9e3qogu-t1p"
+uri = "file://attached_assets/generated_images/bg-vehicule.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "rE1gJqxRe4FEvOV6Jqcwo"
+uri = "file://attached_assets/generated_images/bg-grand-menage.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Vl7QQVvOpj6IawSNB8z42"
+uri = "file://attached_assets/generated_images/bg-reseaux.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "mdfeqSokSHWYTwzGJcfZL"
+uri = "file://attached_assets/generated_images/senior-aide-domicile.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "27P_MClg7NQf8ZoPgePMH"
+uri = "file://attached_assets/generated_images/senior-accompagnement.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "1r9dLZ_YgZSD39s9yA5rl"
+uri = "file://attached_assets/generated_images/senior-assistance.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "0Aq0GLEj5Asxi5qockjTo"
+uri = "file://attached_assets/generated_images/senior-soutien-quotidien.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "seA0eLpjU9-Mfa6E85NDQ"
+uri = "file://attached_assets/generated_images/senior-maintien-domicile.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "35tPD9bsitcakaIlQJd-m"
+uri = "file://attached_assets/generated_images/senior-aide-domestique.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "GClzTQ2hzcWlfQdZneuCh"
+uri = "file://attached_assets/generated_images/senior-perte-autonomie.png"
+type = "image"
+title = "generated_image"
+
+[[outputs]]
+id = "HEBVW8QI-lUDOUR5K9YRI"
+uri = "file://scintinet-ovh.zip"
+type = "unspecified"
+title = "ScintiNet — Fichiers OVH (prêt à déployer)"
+
+[[outputs]]
+id = "CMuPEI7YvArmlAUo5vp5_"
+uri = "file://scintinet-statique.zip"
+type = "unspecified"
+title = "ScintiNet — Dossier de publication complet (version finale)"
+
+[[outputs]]
+id = "2ytbSLtri8Hu3nHuuq9fT"
+uri = "file://attached_assets/generated_videos/scintinet-equipe-nettoyage.mp4"
+type = "video"
+title = "Clip 1 — Équipe ScintiNet en action (16:9 • Web / Facebook)"
+
+[[outputs]]
+id = "EX3jNvxy_vnEROC6WJWEo"
+uri = "file://attached_assets/generated_videos/scintinet-demande-devis-mobile.mp4"
+type = "video"
+title = "Clip 2 — Demande de devis sur mobile (9:16 • Stories / Reels)"
+
+[[outputs]]
+id = "fgV4rvwafZpQ4feF30-u0"
+uri = "file://attached_assets/generated_images/affiche-fb-promo-vendredi.png"
+type = "image"
+title = "Affiche 1 — Promo 10% le vendredi"
+
+[[outputs]]
+id = "uN-ZhUR5JbWvjtzdcwVdF"
+uri = "file://attached_assets/generated_images/affiche-fb-printemps.png"
+type = "image"
+title = "Affiche 2 — Offres de printemps"
+
+[[outputs]]
+id = "_COl_zfRmhPdKo8p_xecK"
+uri = "file://attached_assets/generated_images/affiche-fb-vehicule.png"
+type = "image"
+title = "Affiche 3 — Lavage de véhicule"
+
+[[outputs]]
+id = "ixpUN1jO12t-GMsbJXHDQ"
+uri = "file://attached_assets/generated_images/affiche-fb-grand-menage.png"
+type = "image"
+title = "Affiche 4 — Grand ménage post-hiver"
+
+[[outputs]]
+id = "RzSDTc-qxr9Z7oNSGbZ0n"
+uri = "file://attached_assets/generated_images/affiche-fb-reseaux.png"
+type = "image"
+title = "Affiche 5 — Rejoignez-nous sur Facebook"
+
+[[outputs]]
+id = "2kBeMaYBgibQpFvfBwjme"
+uri = "file://attached_assets/generated_images/poster-fb-promo-vendredi.png"
+type = "image"
+title = "Affiche 1 — Promo 10% le vendredi"
+
+[[outputs]]
+id = "gkRuNGWQBWziESptrCu0-"
+uri = "file://attached_assets/generated_images/poster-fb-printemps.png"
+type = "image"
+title = "Affiche 2 — Offres de printemps"
+
+[[outputs]]
+id = "7xylLCeTdhVkrquOmNmax"
+uri = "file://attached_assets/generated_images/poster-fb-vehicule.png"
+type = "image"
+title = "Affiche 3 — Lavage de véhicule"
+
+[[outputs]]
+id = "Td7ozyfWNRQqbZcfglNok"
+uri = "file://attached_assets/generated_images/poster-fb-grand-menage.png"
+type = "image"
+title = "Affiche 4 — Grand ménage post-hiver"
+
+[[outputs]]
+id = "pOcjaZs87Nk0aHp_Y26D_"
+uri = "file://attached_assets/generated_images/poster-fb-reseaux.png"
+type = "image"
+title = "Affiche 5 — Rejoignez-nous sur Facebook"
+
+[[outputs]]
+id = "0yEseQPR6uW4pdlnlXAyD"
+uri = "file://scintinet-azure.zip"
+type = "unspecified"
+title = "ScintiNet .NET 8 — SendGrid + Prêt Azure"
+
+[[outputs]]
+id = "sf-HjIjC7SZbGd7IXjZft"
+uri = "file://dotnet-scintinet.zip"
+type = "unspecified"
+title = "ScintiNet .NET 8 — Navbar corrigée (v2)"
+
+[[outputs]]
+id = "B1z90P0Nyep_mmIGWnZ4s"
+uri = "file://scintinet-github.zip"
+type = "unspecified"
+title = "scintinet-github.zip — Code source complet (240 fichiers, 107 Mo)"

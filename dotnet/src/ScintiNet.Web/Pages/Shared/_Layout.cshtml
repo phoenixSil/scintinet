@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ScintiNet — Services professionnels d'entretien résidentiel, nettoyage, lavage de vitres, aide aux aînés à Québec. NEQ 3382027319." />
+    <meta property="og:title" content="@(ViewData["Title"] ?? "ScintiNet — L'exigence du propre et net !")" />
+    <meta property="og:description" content="Services professionnels d'entretien résidentiel et aide aux aînés à Québec." />
+    <meta property="og:image" content="/images/logo-scintinet-officiel.png" />
+    <title>@(ViewData["Title"] != null ? $"{ViewData["Title"]} | ScintiNet" : "ScintiNet — L'exigence du propre et net !")</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN (production-ready v3) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue':      '#0097CE',
+                        'brand-blue-dark': '#007baa',
+                        'brand-green':     '#38D430',
+                        'brand-green-light':'#4de645',
+                        'brand-lime':      '#E2E735',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Alpine.js (reactive, lightweight — no build step needed) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased">
+
+    @await Html.PartialAsync("_Navbar")
+
+    <main>
+        @RenderBody()
+    </main>
+
+    @await Html.PartialAsync("_Footer")
+
+    <!-- Tawk.to live chat -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/69fddf85fd13b11c33e871fd/1jo3r28ot';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

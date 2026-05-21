@@ -1,0 +1,29 @@
+/* ScintiNet — Custom styles complementing Tailwind */
+
+@font-face {
+    font-family: 'Conthraxsb';
+    src: url('/fonts/conthrax-sb.woff2') format('woff2'),
+         url('/fonts/conthrax-sb.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Alpine.js cloak */
+[x-cloak] { display: none !important; }
+
+/* Carousel cross-fade */
+.carousel-slide { transition: opacity 0.7s ease-in-out; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #0097CE; border-radius: 3px; }
+
+/* Logo font */
+.font-logo { font-family: 'Conthraxsb', 'Poppins', sans-serif; }
+
+/* Override default Bootstrap margin that came with template */
+body { margin-bottom: 0 !important; }

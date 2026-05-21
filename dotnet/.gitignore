@@ -1,0 +1,7 @@
+## .NET gitignore
+bin/
+obj/
+*.user
+.vs/
+publish/
+*.publish.xml

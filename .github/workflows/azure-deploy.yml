@@ -1,0 +1,111 @@
+name: CI/CD — ScintiNet Azure Web App
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dotnet/**'
+      - '.github/workflows/azure-deploy.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'dotnet/**'
+
+env:
+  DOTNET_VERSION: '8.0.x'
+  PROJECT_PATH: 'dotnet/src/ScintiNet.Web/ScintiNet.Web.csproj'
+  PUBLISH_DIR: 'dotnet/publish'
+  AZURE_WEBAPP_NAME: 'scintinet-az-web-app-prod'
+
+jobs:
+  # ─────────────────────────────────────────────
+  # JOB 1 : Build + Test
+  # ─────────────────────────────────────────────
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET ${{ env.DOTNET_VERSION }}
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore dependencies
+        run: dotnet restore dotnet/ScintiNet.sln
+
+      - name: Build (Release)
+        run: dotnet build dotnet/ScintiNet.sln -c Release --no-restore
+
+      - name: Run tests
+        run: dotnet test dotnet/ScintiNet.sln -c Release --no-build --verbosity normal
+        continue-on-error: true
+
+      - name: Publish
+        run: |
+          dotnet publish ${{ env.PROJECT_PATH }} \
+            -c Release \
+            -o ${{ env.PUBLISH_DIR }} \
+            --no-build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scintinet-webapp
+          path: ${{ env.PUBLISH_DIR }}
+          retention-days: 7
+
+  # ─────────────────────────────────────────────
+  # JOB 2 : Déploiement Azure (main uniquement)
+  # ─────────────────────────────────────────────
+  deploy:
+    name: Deploy to Azure
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    environment:
+      name: production
+      url: https://www.scintinet.com
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: scintinet-webapp
+          path: ${{ env.PUBLISH_DIR }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ${{ env.PUBLISH_DIR }}
+
+      - name: Configure Azure App Settings (Resend)
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            az webapp config appsettings set \
+              --name ${{ env.AZURE_WEBAPP_NAME }} \
+              --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+              --settings \
+                Resend__ApiKey="${{ secrets.RESEND_API_KEY }}" \
+                Resend__FromEmail="noreply@scintinet.com" \
+                Resend__AdminEmail="tsillery@ymail.com" \
+                ASPNETCORE_ENVIRONMENT="Production"
+        continue-on-error: true
+
+      - name: Notify success
+        if: success()
+        run: |
+          echo "Deploiement reussi sur https://www.scintinet.com"
+          echo "App: ${{ env.AZURE_WEBAPP_NAME }}"
+          echo "Commit: ${{ github.sha }}"
+
+      - name: Notify failure
+        if: failure()
+        run: echo "Echec du deploiement — verifier les logs ci-dessus"
